@@ -1,0 +1,56 @@
+
+
+\documentclass[11pt]{report}
+\pagestyle{plain}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{url}
+
+% ------------------- Titulo y  Autor -----------------------------
+% Este documento fue creado por Alejandro Fernandez (alejandro.fernandez@lifia.info.unlp.edu.ar) en su primera version.
+%Algunos cambios en 
+\title{Este es el título de la tesis}
+\author{Estos son los alumnos que la desarrollaron}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este es un resumen de la tesis muy corto (media carilla). El que lo lee se tiene que quedar con la idea de: 1) en que tema trabajaron, 2) cual es el problema que intentaron resolver, 3) que técnica aplicaron para resolverlo y por qué es novedosa, 4) que descubrieron en el proceso (un adelanto de conclusión). 
+\end{abstract}
+
+\tableofcontents
+
+%Cada capitulo será un archivo .tex el cual estará en su propia carpeta, con sus propias imágenes).
+%El comando include hace que el capitulo respectivo se incluya en el documento. No es necesario indicar la extensión 
+%del archivo dado que asume que es .tex
+%Los números en el nombre de las carpetas son solo para tenerlas ordenadas.
+
+\include{00-introduccion/introduccion}
+\include{10-relacionado/relacionado}
+\include{20-estrategia/estrategia}
+
+\include{30-especifico/especifico}
+
+\include{70-evaluacion/evaluacion}
+\include{80-conclusiones/conclusiones}
+
+
+%Los artículos que se citan en la tesis, se incluyen en el archivo bibliografía.bib, en formato bibtex.
+%En la sección bibliografía, van a aparecer automáticamente aquellos que se citan desde el texto 
+%utilizando el comando \cite con la etiqueta correspondiente - en la introducción hay un par de ejemplos. 
+
+\bibliographystyle{ieeetr}
+\bibliography{90-bibliografia}
+
+
+\end{document}
+\end
+
